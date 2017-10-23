@@ -1,0 +1,10 @@
+# change the following into the file : /etc/systemd/system/tomcat.service
+host    replication     postgres        127.0.0.1/32            md5
+host    replication     postgres        ::1/128                 md5
+
+# uncomment the two last lines and change ident to md5
+host    replication     postgres        127.0.0.1/32            md5
+host    replication     postgres        ::1/128                 md5
+
+
+# then save :wq!

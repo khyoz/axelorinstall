@@ -1,0 +1,13 @@
+tomcat should run :
+    check with browser your
+    http://your_ip:8080
+
+Java should run :
+    java -version
+
+check postgres
+    su - postgres
+    psql
+    \l
+    \q
+    exit

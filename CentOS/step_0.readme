@@ -1,0 +1,12 @@
+
+create the sh files like below and copy/paste files into them
+
+touch step_10.sh
+chmod +x step_10.sh
+vi step_10.sh
+# save (:wq!)
+
+execute script
+sh ./step_10.sh
+
+at the end ...delete script file
