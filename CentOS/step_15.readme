@@ -1,0 +1,29 @@
+# create a database for example
+execute the following statements
+
+
+su - postgres
+createdb axelor-demo
+
+psql template1
+template1=# CREATE USER tester WITH PASSWORD 'axelor';
+-----> CREATE ROLE
+template1=# GRANT ALL PRIVILEGES ON DATABASE "axelor-demo" to tester;
+----> GRANT
+template1=# \q
+-bash-4.2$
+exit
+
+
+then replace into your directory : /opt/tomcat/webapps/abs-4.1.0-FR/WEB-INF/classes
+
+vi application.properties
+
+# Database settings
+# ~~~~~
+db.default.dialect = org.hibernate.dialect.PostgreSQLDialect
+db.default.driver = org.postgresql.Driver
+db.default.ddl = update
+db.default.url = jdbc:postgresql://localhost:5432/axelor-demo
+db.default.user = tester
+db.default.password = axelor
