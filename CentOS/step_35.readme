@@ -1,0 +1,12 @@
+then replace into your directory : /opt/tomcat/webapps/abs-4.1.0-FR/WEB-INF/classes
+
+vi /opt/tomcat/webapps/abs-4.1.0-FR/WEB-INF/classes/application.properties
+
+# Database settings
+# ~~~~~
+db.default.dialect = org.hibernate.dialect.PostgreSQLDialect
+db.default.driver = org.postgresql.Driver
+db.default.ddl = update
+db.default.url = jdbc:postgresql://localhost:5432/axelor-demo
+db.default.user = tester
+db.default.password = axelor
