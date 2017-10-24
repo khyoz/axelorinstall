@@ -17,5 +17,9 @@ GRANT ALL PRIVILEGES ON DATABASE "axelor-demo" to tester;
 -bash-4.2$
 exit
 
+# version 0.11
+UPDATE : CREATE user like below instead
+#LINK 1
+ createuser --createdb --username postgres --createrole --pwprompt tester
 
 

@@ -2,4 +2,19 @@
 # link = http://docs.axelor.com/adk/latest/dev_guide/application/config.html#application-configuration
 # export JAVA_OPTS="-Daxelor.config=/path/to/my-app.properties"
 
+
+export JAVA_HOME=/usr/java/jdk1.8.0_151;
+export PATH=$JAVA_HOME/bin:$PATH;
 export JAVA_OPTS="-Daxelor.config=/opt/tomcat/webapps/abs-4.1.0-FR/WEB-INF/classes"
+
+
+
+# Manage application in tomcat
+# check https://www.youtube.com/watch?v=zehzqr3QYfw
+cd /opt/tomcat/conf
+#check usrers to access from ip:8080 (manage app)
+vi tomcat-users.xml
+#add following lines to allow user to manage apps
+<role rolename="manager-gui"/>
+<user username="CHANGE_YOUR_GUI_USER" password="CHANGE_YOUR_PASSWORD" roles="manager-gui"/>
+
