@@ -18,3 +18,4 @@ vi tomcat-users.xml
 <role rolename="manager-gui"/>
 <user username="CHANGE_YOUR_GUI_USER" password="CHANGE_YOUR_PASSWORD" roles="manager-gui"/>
 
+service tomcat restart

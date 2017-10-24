@@ -10,7 +10,7 @@ sudo systemctl restart firewalld;
 
 #download ABS .war
 cd /opt/tomcat/webapps
-sudo wget http://download.axelor.com/abs/abs-4.1.0-FR.war
+#sudo wget http://download.axelor.com/abs/abs-4.1.0-FR.war
 
 #here
 

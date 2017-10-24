@@ -20,6 +20,10 @@ exit
 # version 0.11
 UPDATE : CREATE user like below instead
 #LINK 1
- createuser --createdb --username postgres --createrole --pwprompt tester
-
-
+su - postgres
+createuser --createdb --username postgres --createrole --pwprompt tester
+createdb axelor-demo
+psql
+GRANT ALL PRIVILEGES ON DATABASE "axelor-demo" to tester;
+\q
+exit
