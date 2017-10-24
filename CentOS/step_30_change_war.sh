@@ -1,7 +1,7 @@
 mkdir confmywar
 cp ./abs-4.1.0-FR.war ./confmywar/abs-4.1.0-FR.war
 cd /confmywar
-jar -cvf abs-4.1.0-FR.war .
+
 rm abs-4.1.0-FR.war
 
 change

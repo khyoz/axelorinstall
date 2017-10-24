@@ -1,0 +1,5 @@
+# Additional stuff
+# link = http://docs.axelor.com/adk/latest/dev_guide/application/config.html#application-configuration
+# export JAVA_OPTS="-Daxelor.config=/path/to/my-app.properties"
+
+export JAVA_OPTS="-Daxelor.config=/opt/tomcat/webapps/abs-4.1.0-FR/WEB-INF/classes"

@@ -15,12 +15,26 @@ sudo yum -y localinstall jdk-8u151-linux-x64.rpm;
  export JAVA_HOME=/usr/java/jdk1.8.0_151;
 export PATH=$JAVA_HOME/bin:$PATH;
 
-#install postgresql
-sudo yum install -y postgresql-server postgresql-contrib;
-sudo postgresql-setup initdb;
-sudo vi /var/lib/pgsql/data/pg_hba.conf;
-sudo systemctl start postgresql;
  wget https://services.gradle.org/distributions/gradle-3.4.1-bin.zip;
+
+#install postgresql
+#----------------------------------------------------------
+# VERSION 1
+#----------------------------------------------------------
+# sudo yum install -y postgresql-server postgresql-contrib;
+# sudo postgresql-setup initdb;
+# sudo vi /var/lib/pgsql/data/pg_hba.conf;
+# sudo systemctl start postgresql;
+
+#----------------------------------------------------------
+# VERSION 2 : POSTSGRESQL 9.5
+#----------------------------------------------------------
+yum install -y https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-centos95-9.5-2.noarch.rpm
+yum install postgresql95-server postgresql95 -y
+yum install php-pgsql -y
+/usr/pgsql-9.5/bin/postgresql95-setup initdb
+sudo systemctl start postgresql-9.5.service
+systemctl enable postgresql-9.5.service
 
 yum install -y git;
 yum install -y mlocate;

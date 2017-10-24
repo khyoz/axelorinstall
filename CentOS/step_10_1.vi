@@ -1,6 +1,8 @@
+experiment 1 ; don't change the file, VI command commented in .sh file
+
 # change the following into the file : /etc/systemd/system/tomcat.service
-host    replication     postgres        127.0.0.1/32            md5
-host    replication     postgres        ::1/128                 md5
+host    replication     postgres        127.0.0.1/32            ident
+host    replication     postgres        ::1/128                 ident
 
 # uncomment the two last lines and change ident to md5
 host    replication     postgres        127.0.0.1/32            md5
